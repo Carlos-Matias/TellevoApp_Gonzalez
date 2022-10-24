@@ -1,0 +1,26 @@
+<!-- carrucel de fotos -->
+<ion-content class="no-scroll">
+<ion-slides mode="ios" pager="ios" scrollbar="ios" >
+  <ion-slide *ngFor="let slide of slides">
+    <div class="slide-img-padding">
+       <img [src]="slide.img" alt="">
+    </div>
+    <div>
+      <h3 [innerHTML]="slide.titulo"></h3>
+    </div>
+  </ion-slide>
+</ion-slides>
+
+<!--Botones que redireccionan a Registro y Iniciar sesión-->
+
+    <ion-button color="secondary" expand="full" shape="round" mode="ios" class="btn-secondary" routerLink="/login">
+      Iniciar sesión
+    </ion-button>
+
+    <ion-button expand="full" fill="clear" routerLink="/registro" >
+      <ion-label color="dark">Registrate</ion-label>
+    </ion-button>
+</ion-content>
+
+<!--npm install instala todas las librerias-->
+

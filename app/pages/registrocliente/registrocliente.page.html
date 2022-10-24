@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+      <ion-buttons slot="start">
+        <ion-button (click)="mostrarMenu()">
+          <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-card>
+    <ion-card-header>
+      <img src="assets/auto-rojo.png">
+      <ion-card-title class="titulo" mode="ios">Unete a nosotros</ion-card-title>
+      <br>
+      <ion-card-subtitle color="dark" mode="ios" class="sub-titulo">Registrate con estos simples pasos</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Correo </ion-label>
+          <ion-input [(ngModel)]="datos.correo"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contraseña </ion-label>
+          <ion-input [(ngModel)]="datos.password" type="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Carrera</ion-label>
+          <ion-input [(ngModel)]="datos.carrera"></ion-input>
+        </ion-item>
+        <br>
+      <ion-label slot="end" color="primary">Olvidaste tu contraseña?</ion-label>
+      <br>
+      <ion-button (click)="registro()" color="dark" expand="full" >
+        Registrarse
+      </ion-button>
+      <br>
+      <ion-label color="dark" class="registro">¿Usuario existente?</ion-label>
+      <br>
+      <ion-label class="registro" color="primary" routerLink="/login">Iniciar sesión</ion-label>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
