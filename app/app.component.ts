@@ -13,7 +13,7 @@ import { InteractionService } from './services/interaction.service';
 })
 export class AppComponent {
 
-  login: Boolean = false;
+  login = false;
   rol: 'conductor' | 'cliente' = null;
 
 

@@ -1,5 +1,4 @@
 <ion-app>
-  <app-menu></app-menu>  
   <ion-menu side="start" menuId="first" contentId="main">
     <ion-header>
       <ion-toolbar color="light">
@@ -40,6 +39,12 @@
           Home conductor
           </ion-item>
        </ion-menu-toggle>
+       <ion-menu-toggle *ngIf="login && rol === 'conductor'" >
+        <ion-item routerLink="/mapsconductor" detail=true>
+        <ion-icon slot="start" name="car-sport-outline" color="primary"></ion-icon>
+        Realizar viaje
+        </ion-item>
+     </ion-menu-toggle>
        <ion-menu-toggle *ngIf="login && rol === 'cliente'" >
         <ion-item routerLink="/clienteshome" detail=true>
         <ion-icon slot="start" name="car-sport-outline" color="primary"></ion-icon>

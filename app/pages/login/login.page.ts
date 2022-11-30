@@ -29,7 +29,6 @@ export class LoginPage implements OnInit {
 
   async login() {
     await this.interaction.presentLoading('Ingresando...');
-    console.log('credenciales->', this.credenciales);
     const res = await this.auth.login(this.credenciales.correo, this.credenciales.password).catch(error =>{
       console.log('error');
       this.interaction.closeLoading();

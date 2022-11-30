@@ -20,12 +20,13 @@ export class RegistroPage implements OnInit {
   patente: null,
   carrera: null,
   uid: null,
+  ubicacion: null,
   perfil: 'conductor'
   };
 
   constructor(private menuController: MenuController, private auth: AuthService,
               private firestore: FirestoreService, private interaction: InteractionService,
-              private reuter: Router) { }
+              private routes: Router) { }
 
   ngOnInit() {
   }
@@ -51,7 +52,7 @@ export class RegistroPage implements OnInit {
       await this.firestore.createDoc(this.datos, path, id);
       this.interaction.closeLoading();
       this.interaction.presentToast('Registrado con exito');
-      this.reuter.navigate(['/index']);
+      this.routes.navigate(['/index']);
     }
   }
 

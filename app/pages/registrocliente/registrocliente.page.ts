@@ -20,6 +20,7 @@ export class RegistroclientePage implements OnInit {
     patente: null,
     carrera: null,
     uid: null,
+    ubicacion: null,
     perfil: 'cliente'
     };
 

@@ -14,7 +14,7 @@ export class PerfilPage implements OnInit {
 
   uid: string = null;
   info: UserI = null;
-  login: Boolean = false;
+  login = false;
   rol: 'conductor' | 'cliente' = null;
 
   constructor(private menuController: MenuController, private authService: AuthService,

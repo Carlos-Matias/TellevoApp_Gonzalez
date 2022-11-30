@@ -5,6 +5,10 @@ export interface UserI {
   modelo: string;
   patente: string;
   carrera: string;
+  ubicacion: {
+    lat: number;
+    lng: number;
+  };
   perfil: 'conductor' | 'cliente';
 }
 

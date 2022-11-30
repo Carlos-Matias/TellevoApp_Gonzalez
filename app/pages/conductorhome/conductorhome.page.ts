@@ -3,7 +3,6 @@ import { MenuController, AlertController } from '@ionic/angular';
 import { UserI } from '../../models/models';
 import { AuthService } from '../../services/auth.service';
 import { FirestoreService } from '../../services/firestore.service';
-import { InteractionService } from '../../services/interaction.service';
 
 @Component({
   selector: 'app-conductorhome',
@@ -14,7 +13,8 @@ export class ConductorhomePage implements OnInit {
 
   uid: string = null;
   info: UserI = null;
-  login: Boolean = false;
+  login = false;
+  ubicacion = null;
   rol: 'conductor' | 'cliente' = null;
 
   slides = [
@@ -34,7 +34,7 @@ export class ConductorhomePage implements OnInit {
 
   constructor(private menuController: MenuController, private authService: AuthService,
               private firestore: FirestoreService, public alertController: AlertController,
-              private interaction: InteractionService, private auth: AuthService,) {
+              private auth: AuthService,) {
                 this.auth.stateUser().subscribe(res =>{
                   if(res){
                     this.login = true;
