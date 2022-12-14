@@ -51,6 +51,12 @@
         Home Cliente  
         </ion-item>
      </ion-menu-toggle>
+        <ion-menu-toggle *ngIf="login && rol === 'cliente'" >
+          <ion-item routerLink="/mapscliente" detail=true>
+          <ion-icon slot="start" name="car-sport-outline" color="primary"></ion-icon>
+        Solicitar viaje  
+          </ion-item>
+      </ion-menu-toggle>
        <ion-menu-toggle *ngIf="login === true" >
         <ion-item routerLink="/perfil" detail=true>
         <ion-icon slot="start" name="car-sport-outline" color="primary"></ion-icon>

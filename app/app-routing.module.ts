@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'mapsconductor',
     loadChildren: () => import('./pages/mapsconductor/mapsconductor.module').then( m => m.MapsconductorPageModule)
   },
+  {
+    path: 'mapscliente',
+    loadChildren: () => import('./pages/mapscliente/mapscliente.module').then( m => m.MapsclientePageModule)
+  },
 ];
 
 @NgModule({
